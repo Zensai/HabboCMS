@@ -1,0 +1,5 @@
+{
+	"global" : "includes/global.php",
+	"logout" : "account/logout",
+	"session_expired" : "account/logout"
+}

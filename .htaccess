@@ -1,0 +1,26 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule ^gamedata/figuredata$ ./gamedata/figuredata.xml
+
+RewriteRule ^gamedata/furnidata/(.*)$ ./gamedata/furnidata.txt
+RewriteRule ^gamedata/productdata/(.*)$ ./gamedata/productdata.txt
+
+RewriteRule ^gamedata/external_variables/(.*)$ ./gamedata/external_variables.txt
+RewriteRule ^gamedata/external_flash_texts/(.*)$ ./gamedata/external_flash_texts.txt
+
+RewriteRule ^gamedata/override/external_override_variables/(.*)$ ./gamedata/external_override_variables.txt
+RewriteRule ^gamedata/override/external_flash_override_texts/(.*)$ ./gamedata/external_flash_override_texts.txt
+
+RewriteRule ^gamedata/banner$ ./gamedata/banner.png
+
+RewriteRule ^habblet/xml/promo_habbos$ ./gamedata/habblet/xml/promo_habbos.xml
+
+RewriteRule ^clientlog/update$ ./gamedata/clientlog/update.php
+
+RewriteRule ^cacheCheck$ ./gamedata/cacheCheck.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php
